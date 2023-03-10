@@ -1,0 +1,20 @@
+public class Hello {
+    public static void  main(String[] args) {
+        int[] mylotto = new int[6];
+        boolean[] all = new boolean[45];
+        int i = 0; //로또배열 안에 값을 넣어주는 순서
+
+        while (i < 6){
+            int num = (int)(Math.random() *44); // 공 랜덤뽑기
+            if(!all[num]){
+                mylotto[i] = num+1;
+                i++;
+                all[num] = true;
+            }
+        }
+        for(int j =0; j < 6; j++){
+            System.out.println(mylotto[j]);
+        }
+    }
+
+}
